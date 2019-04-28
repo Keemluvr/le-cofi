@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&subset=latin-ext');
+
+/* Navbar */
+.box-shadow {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand {
+    font-family: "Josefin Sans", Arial, sans-serif;
+    padding-top: 1.3125rem !important;
+}
+
+sup {
+    font-size: 26px;
+}
+
+.active {
+    color: #c49b63 !important;
+}
+
+.nav-item {
+    letter-spacing: 2px;
+    opacity: 1 !important;
+    font-size: 13px;
+    font-weight: 400 !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    color: white !important;
+}
+
+.fa-shopping-cart {
+    color: white;
+}
+
+.bag {
+    position: relative;
+    background: #f8b500;
+    text-align: center;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    top: -16px;
+    right: 4px;
+}
+
+/* End navbar */
+
+/* Background */
+
+.bgSizeContain {
+    min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1525610553991-2bede1a236e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    min-width: 100vw;
+    background: #000;
+    opacity: 0.3;
+    position: absolute;
+}
+
+/* End background */
+
+/* Title Page */
+
+.central {
+    left: 0px;
+    top: 30vh;
+}
+
+.title-page {
+    position: absolute;
+    left: 50vw;
+    width: 300px;
+    color: white;
+    z-index: 999999;
+}
+
+.welcome {
+    font-family: "Great Vibes", cursive;
+    font-size: 30px;
+    color: #f8b500;
+}
+
+.title-2 {
+    font-size: 40px;
+    line-height: 1.5;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.title-3 {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.btn.btn-outline-primary {
+    background: #c49b63;
+    border: 1px solid #c49b63;
+    color: #000;
+}
+
+.btn.btn-outline-primary:hover {
+    background: transparent;
+    border: 1px solid #c49b63;
+    color: #c49b63;
+}
+
+.btn.btn-outline-white {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn.btn-outline-white:hover {
+    background: #c49b63;
+    border: 1px solid #c49b63;
+    color: #000;
+}
+
+/* End Title Page */
