@@ -1,5 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+
+/* Animação de fadeInUp */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
 
 /* Navbar */
 .box-shadow {
@@ -19,6 +61,33 @@ sup {
     color: #c49b63 !important;
 }
 
+.nav-item:hover .nav-link {
+    color: #c49b63 !important;
+    transition: 0.3s;
+}
+
+.dropdown-menu {
+    background: #000;
+    font-size: 13px;
+}
+
+.dropdown-menu .dropdown-item {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: transparent;
+    color: white;
+    transition: 0.3s;
+}
+
+.dropdown:hover>.dropdown-menu {
+    /* Abre o droodown apenas passando em cima */
+    display: block;
+    margin-top: 0px;
+}
+
 .nav-item {
     letter-spacing: 2px;
     opacity: 1 !important;
@@ -36,6 +105,11 @@ sup {
 
 .fa-shopping-cart {
     color: white;
+    margin-top: 2.7vh;
+}
+
+.fa-shopping-cart:hover {
+    color: #c49b63;
 }
 
 .bag {
@@ -45,8 +119,21 @@ sup {
     border-radius: 50%;
     width: 24px;
     height: 24px;
-    top: -16px;
-    right: 4px;
+    top: -34px;
+    right: -8px;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    /* Deixa a navbar preta em dispositivos pequenos*/
+    .navbar {
+        background: rgb(0, 0, 0) !important;
+    }
+
+    .info .row {
+        padding: 2% 3% 2% 4% !important;
+    }
 }
 
 /* End navbar */
@@ -54,7 +141,7 @@ sup {
 /* Background */
 
 .bgSizeContain {
-    min-height: 100vh;
+    min-height: 90vh;
     background-image: url(https://images.unsplash.com/photo-1525610553991-2bede1a236e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,10 +152,9 @@ sup {
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
-    min-width: 100vw;
+    height: 90vh;
     background: #000;
-    opacity: 0.3;
+    opacity: 0.5;
     position: absolute;
 }
 
@@ -78,7 +164,7 @@ sup {
 
 .central {
     left: 0px;
-    top: 30vh;
+    top: -72vh;
 }
 
 .title-page {
@@ -133,3 +219,104 @@ sup {
 }
 
 /* End Title Page */
+
+/* Intro */
+.cont-intro {
+    margin-top: -570px;
+    margin-right: 0;
+    margin-left: 0;
+    position: relative;
+}
+
+
+.info {
+    background-color: #000;
+}
+
+.info .row {
+    padding: 2% 5% 2% 12%;
+}
+
+.info-block {
+    animation-delay: 0.4s;
+}
+
+.no-gutters {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.col .icon {
+    padding-right: 25px;
+}
+
+.col .icon span {
+    color: #c49b63;
+}
+
+.col .text {
+    width: 100%;
+}
+
+.text h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-family: "Josefin Sans", Arial, sans-serif;
+}
+
+.text p {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: gray;
+}
+
+.book {
+    background-color: #c49b63;
+    width: 35%;
+}
+
+.book h3 {
+    font-size: 16px;
+}
+
+
+.form-control {
+    border: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: transparent;
+    height: 58px !important;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 13px;
+    border-radius: 0px;
+    padding: 0.375rem 0.75rem;
+    font-family: "Poppins", Arial, sans-serif !important;
+    line-height: 1.8;
+    font-weight: 350;
+}
+
+input::placeholder {
+    color: white !important;
+}
+
+.form-control:focus {
+    border: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: transparent;
+    box-shadow: 0 0 0 0.2rem transparent;
+}
+
+.submit {
+    background-color: white;
+}
+
+.submit:hover {
+    background-color: #000;
+    color: white;
+}
+
+/* End intro */
